@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Shortlist — PARTNER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="name">PARTNER</span>
+        <span class="tag">Not just Footwear, it's a vibe!</span>
+      </a>
+      <nav class="nav">
+        <a href="shop.html">Shop</a>
+        <a href="shortlist.html">Shortlist <span id="slCount" class="small"></span></a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Store</a>
+        <a class="btn btn-primary" href="shop.html">Shop Collection</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">SHORTLIST</div>
+        <h1 class="h2">Your saved picks</h1>
+        <p class="p">Shortlist products and send the full list on WhatsApp — no cart, no checkout.</p>
+
+        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a id="waShortlist" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+            Send Shortlist on WhatsApp
+          </a>
+          <button id="clearAll" class="btn btn-secondary" type="button">
+            Clear Shortlist
+          </button>
+        </div>
+
+        <div id="emptyState" class="card" style="margin-top:22px; border-radius:28px; display:none;">
+          <div class="card-body" style="padding:22px;">
+            <div class="card-title">No items shortlisted yet</div>
+            <p class="p">Go to Shop, add a few products, and come back here.</p>
+            <div style="margin-top:14px;">
+              <a class="btn btn-primary" href="shop.html">Go to Shop</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="shortlistGrid" class="grid grid-3" style="margin-top:22px"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="data/products.js"></script>
+  <script src="scripts/common.js"></script>
+  <script src="scripts/shortlist.js"></script>
+</body>
+</html>

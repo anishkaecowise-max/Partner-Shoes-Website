@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Shop — PARTNER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="name">PARTNER</span>
+        <span class="tag">Not just Footwear, it's a vibe!</span>
+      </a>
+      <nav class="nav">
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Store</a>
+        <a class="btn btn-primary" href="shop.html">Shop Collection</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">SHOP</div>
+        <h1 class="h2">Premium collections</h1>
+        <p class="p">Filter by category and order directly on WhatsApp.</p>
+
+        <div class="toolbar" style="margin-top:22px">
+          <div class="pills" id="filterPills"></div>
+          <div style="display:flex; align-items:center; gap:10px">
+            <span class="small">Sort</span>
+            <select class="select" id="sortSelect">
+              <option>New Arrivals</option>
+              <option>Price: Low to High</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="shopGrid" class="grid grid-3" style="margin-top:22px"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="data/products.js"></script>
+  <script src="scripts/common.js"></script>
+  <script src="scripts/shop.js"></script>
+</body>
+</html>

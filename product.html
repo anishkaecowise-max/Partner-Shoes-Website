@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Product — PARTNER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="name">PARTNER</span>
+        <span class="tag">Not just Footwear, it's a vibe!</span>
+      </a>
+      <nav class="nav">
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Store</a>
+        <a class="btn btn-primary" href="shop.html">Shop Collection</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="small" style="margin-bottom:18px;">
+          <a href="shop.html" class="muted">Shop</a> / <span id="crumb"></span>
+        </div>
+
+        <div class="grid" style="gap:26px; grid-template-columns:1fr;">
+          <div class="card" style="border-radius:28px; overflow:hidden;">
+            <img id="prodImg" src="" alt="">
+          </div>
+
+          <div class="card" style="border-radius:28px;">
+            <div class="card-body" style="padding:22px">
+              <h1 class="h2" id="prodName" style="margin:0"></h1>
+              <div style="margin-top:10px; display:flex; gap:12px; align-items:baseline;">
+                <div class="price" id="prodPrice" style="font-size:18px;"></div>
+                <div class="compare" id="prodCompare"></div>
+              </div>
+              <p class="p" id="prodDesc"></p>
+
+              <div style="margin-top:18px">
+                <div style="font-weight:700; font-size:14px;">Size</div>
+                <div id="sizes" class="pills" style="margin-top:10px"></div>
+                <div class="small" style="margin-top:8px;">Selected: <span id="sizeSelected">Select size</span></div>
+              </div>
+
+              <div style="margin-top:18px">
+                <div style="font-weight:700; font-size:14px;">Highlights</div>
+                <ul id="features" class="p" style="margin-top:10px; padding-left:18px;"></ul>
+              </div>
+
+              <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
+                <a id="waBtn" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+                <a class="btn btn-secondary" href="contact.html">Visit Store</a>
+              </div>
+
+              <div style="margin-top:18px" class="badges">
+                <div class="badge"><span class="dot"></span> Quality Checked</div>
+                <div class="badge"><span class="dot"></span> Easy Exchange</div>
+                <div class="badge"><span class="dot"></span> Made for India</div>
+                <div class="badge"><span class="dot"></span> Premium Finish</div>
+              </div>
+
+              <div style="margin-top:18px">
+                <div style="font-weight:700; font-size:14px;">Materials</div>
+                <div id="materials" class="pills" style="margin-top:10px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          // Make it 2-column on desktop without extra CSS files:
+          const mq = window.matchMedia("(min-width: 1024px)");
+          function layout(){
+            document.querySelector(".grid").style.gridTemplateColumns = mq.matches ? "1fr 1fr" : "1fr";
+          }
+          mq.addEventListener("change", layout);
+          layout();
+        </script>
+      </div>
+    </section>
+  </main>
+
+  <script src="data/products.js"></script>
+  <script src="scripts/common.js"></script>
+  <script src="scripts/product.js"></script>
+</body>
+</html>
